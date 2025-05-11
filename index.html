@@ -1,1 +1,755 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayesha Jamil | Data Analyst & Machine Learning Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-cyan-600">Ayesha Jamil</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-cyan-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-cyan-600 transition">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-cyan-600 transition">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-cyan-600 transition">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-cyan-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-cyan-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-cyan-600">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-cyan-600">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-cyan-600">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-cyan-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Ayesha Jamil</h1>
+                    <p class="text-xl md:text-2xl mb-8">Data | Python | Machine Learning | Visualization</p>
+                    <p class="text-lg mb-8">Transforming raw data into actionable insights through machine learning and visualization.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://wa.me/923229161556" class="bg-white text-cyan-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i> Contact on WhatsApp
+                        </a>
+                        <a href="mailto:ayeshajamil10502@gmail.com" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-cyan-600 transition flex items-center justify-center">
+                            <i class="fas fa-envelope mr-2"></i> Email Me
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-on-scroll">
+                    <img src="https://img.freepik.com/free-vector/data-analysis-concept-illustration_114360-727.jpg" alt="Data Analysis" class="w-full max-w-md floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center animate-on-scroll">
+                    <img src="ayesha.jpeg" alt="Ayesha Jamil" class="rounded-full w-64 h-64 object-cover border-4 border-cyan-600">
+                </div>
+                <div class="md:w-2/3 md:pl-12 animate-on-scroll">
+                    <p class="text-lg text-gray-700 mb-6">
+                        I'm Ayesha Jamil, a passionate data analyst and Python programmer with experience in turning raw data into actionable insights. I specialize in Machine Learning, Python scripting, data cleaning, and interactive dashboards. With a solid foundation in MySQL and Power BI, I help translate data into decision-making tools.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        My journey in data science began with a fascination for patterns and predictions. I love the challenge of extracting meaningful information from complex datasets and presenting it in ways that drive business decisions.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-cyan-100 text-cyan-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-database mr-2"></i> Data Analysis
+                        </div>
+                        <div class="bg-cyan-100 text-cyan-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fab fa-python mr-2"></i> Python Programming
+                        </div>
+                        <div class="bg-cyan-100 text-cyan-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-brain mr-2"></i> Machine Learning
+                        </div>
+                        <div class="bg-cyan-100 text-cyan-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-chart-line mr-2"></i> Data Visualization
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Skills</h2>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-code text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programming Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm flex items-center">
+                            <i class="fab fa-python mr-1 text-blue-500"></i> Python
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Data Analytics -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-chart-bar text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Data Analytics</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Power BI</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Pandas</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">NumPy</span>
+                    </div>
+                </div>
+                
+                <!-- Database -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-database text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Database</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm flex items-center">
+                            <i class="fas fa-database mr-1 text-orange-500"></i> MySQL
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Machine Learning -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-brain text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Machine Learning</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">scikit-learn</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">matplotlib</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">seaborn</span>
+                    </div>
+                </div>
+                
+                <!-- AI Concepts -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-robot text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">AI Concepts</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">NLP</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Sentiment Analysis</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Classification</span>
+                    </div>
+                </div>
+                
+                <!-- Others -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-tools text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Others</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Jupyter Notebook</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm flex items-center">
+                            <i class="fab fa-git-alt mr-1 text-orange-600"></i> Git
+                        </span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Projects</h2>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md project-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-microphone text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Voice Assistant – Speech Recognition</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">ML-based voice command system that performs automated tasks using speech recognition technology.</p>
+                    <button onclick="openModal('modal1')" class="text-cyan-600 font-medium flex items-center hover:text-cyan-800 transition">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md project-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Spam Mail Prediction</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">ML classification model to detect spam emails with high accuracy using natural language processing.</p>
+                    <button onclick="openModal('modal2')" class="text-cyan-600 font-medium flex items-center hover:text-cyan-800 transition">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md project-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-comment-dots text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Sentiment Analysis</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Text-based analysis to classify sentiments in real-time using machine learning and NLP techniques.</p>
+                    <button onclick="openModal('modal3')" class="text-cyan-600 font-medium flex items-center hover:text-cyan-800 transition">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md project-card transition duration-300 animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-shopping-cart text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Ecommerce Sales Dashboard</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Power BI dashboard analyzing sales, trends, and revenue breakdowns for ecommerce business insights.</p>
+                    <button onclick="openModal('modal4')" class="text-cyan-600 font-medium flex items-center hover:text-cyan-800 transition">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What People Say</h2>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Ayesha's ML models helped us automate key business tasks with impressive accuracy. Her understanding of data patterns is exceptional."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 w-12 h-12 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">John Smith</h4>
+                            <p class="text-gray-600 text-sm">CTO, Tech Solutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md animate-on-scroll">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Her dashboards brought clarity to our sales data and helped us identify key growth opportunities we were missing before."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 w-12 h-12 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Marketing Director, Retail Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 animate-on-scroll">
+                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-phone-alt text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">WhatsApp</h4>
+                            <a href="https://wa.me/923229161556" class="text-gray-600 hover:text-cyan-600 transition">+92 322 9161556</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Email</h4>
+                            <a href="mailto:ayeshajamil10502@gmail.com" class="text-gray-600 hover:text-cyan-600 transition">ayeshajamil10502@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Location</h4>
+                            <p class="text-gray-600">Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-cyan-600 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-gray-900 hover:text-white transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-blue-500 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 animate-on-scroll">
+                    <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-cyan-700 transition w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold text-cyan-400">Ayesha Jamil</span>
+                    <p class="text-gray-400 mt-2">Data Analyst & Machine Learning Engineer</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center space-x-6 mb-6 md:mb-0">
+                    <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Ayesha Jamil. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <!-- Modal 1 - Voice Assistant -->
+    <div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition duration-300">
+        <div class="bg-white rounded-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Voice Assistant – Speech Recognition</h3>
+                    <button onclick="closeModal('modal1')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <img src="https://img.freepik.com/free-vector/voice-recognition-concept-illustration_114360-8394.jpg" alt="Voice Assistant" class="w-full rounded-lg">
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Description</h4>
+                        <p class="text-gray-700">ML-based voice command system that performs automated tasks using speech recognition technology. The assistant can understand natural language commands, process them, and execute various functions like web searches, setting reminders, playing music, and more.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">SpeechRecognition</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">pyttsx3</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">NLTK</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Key Features</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Real-time speech recognition with 95% accuracy</li>
+                            <li>Natural language processing for command interpretation</li>
+                            <li>Text-to-speech response system</li>
+                            <li>Modular design for easy feature addition</li>
+                            <li>Multi-platform compatibility</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Outcome</h4>
+                        <p class="text-gray-700">The voice assistant successfully reduced manual task execution time by 70% in testing scenarios. It demonstrated robust performance across different accents and could be extended to integrate with smart home devices and business applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 - Spam Mail Prediction -->
+    <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition duration-300">
+        <div class="bg-white rounded-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Spam Mail Prediction</h3>
+                    <button onclick="closeModal('modal2')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <img src="https://img.freepik.com/free-vector/spam-concept-illustration_114360-2178.jpg" alt="Spam Mail Prediction" class="w-full rounded-lg">
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Description</h4>
+                        <p class="text-gray-700">ML classification model to detect spam emails with high accuracy using natural language processing. The system analyzes email content, headers, and metadata to classify messages as spam or legitimate with minimal false positives.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">scikit-learn</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">NLP</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Pandas</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">NLTK</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Key Features</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>98% accuracy in spam detection</li>
+                            <li>Real-time classification capability</li>
+                            <li>Feature extraction from email content and metadata</li>
+                            <li>Customizable sensitivity threshold</li>
+                            <li>Detailed reporting of classification metrics</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Outcome</h4>
+                        <p class="text-gray-700">The model successfully filtered out 98.3% of spam emails in testing while maintaining a false positive rate below 0.5%. It significantly reduced the time users spent manually sorting through their inboxes and could be integrated with existing email clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3 - Sentiment Analysis -->
+    <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition duration-300">
+        <div class="bg-white rounded-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Sentiment Analysis</h3>
+                    <button onclick="closeModal('modal3')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <img src="https://img.freepik.com/free-vector/sentiment-analysis-concept-illustration_114360-7456.jpg" alt="Sentiment Analysis" class="w-full rounded-lg">
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Description</h4>
+                        <p class="text-gray-700">Text-based analysis to classify sentiments in real-time using machine learning and NLP techniques. The system can analyze customer reviews, social media posts, and other text data to determine positive, negative, or neutral sentiment with contextual understanding.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">NLTK</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">seaborn</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">TextBlob</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Transformers</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Key Features</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Real-time sentiment classification</li>
+                            <li>Contextual understanding of text</li>
+                            <li>Emotion detection (happy, angry, sad, etc.)</li>
+                            <li>Visualization dashboard for sentiment trends</li>
+                            <li>API for integration with other systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Outcome</h4>
+                        <p class="text-gray-700">The sentiment analysis tool achieved 92% accuracy in classifying customer feedback. Businesses using the system reported improved customer satisfaction as they could quickly identify and address negative sentiment trends. The visualization dashboard provided actionable insights at a glance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 4 - Ecommerce Sales Dashboard -->
+    <div id="modal4" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition duration-300">
+        <div class="bg-white rounded-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Ecommerce Sales Dashboard</h3>
+                    <button onclick="closeModal('modal4')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <img src="https://img.freepik.com/free-vector/business-dashboard-concept-illustration_114360-1689.jpg" alt="Ecommerce Sales Dashboard" class="w-full rounded-lg">
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Description</h4>
+                        <p class="text-gray-700">Power BI dashboard analyzing sales, trends, and revenue breakdowns for ecommerce business insights. The interactive dashboard provides a comprehensive view of business performance with drill-down capabilities to examine specific products, regions, or time periods.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Power BI</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">DAX</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Excel</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Key Features</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Real-time sales tracking</li>
+                            <li>Customer segmentation analysis</li>
+                            <li>Product performance metrics</li>
+                            <li>Geographical sales distribution</li>
+                            <li>Inventory turnover insights</li>
+                            <li>Customizable KPIs</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Outcome</h4>
+                        <p class="text-gray-700">The dashboard helped the ecommerce business identify their top-performing products and underperforming categories, leading to a 23% increase in sales after inventory adjustments. Decision-making time was reduced by 65% as managers could access all critical metrics in one place with real-time updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('invisible', 'opacity-0');
+            document.body.classList.add('overflow-hidden');
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('invisible', 'opacity-0');
+            document.body.classList.remove('overflow-hidden');
+        }
+        
+        // Close modals when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal(this.id);
+                }
+            });
+        });
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+        
+        // Scroll animation
+        function checkScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+    </script>
+</body>
+</html>
